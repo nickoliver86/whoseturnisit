@@ -2,6 +2,7 @@ from slackbot.bot import Bot
 from slackbot.bot import respond_to
 from slackbot.bot import listen_to
 import re
+import pdb
 
 def main():
     bot = Bot()
@@ -9,7 +10,23 @@ def main():
 
 @listen_to('whoseturnisit')
 def help(message):
-    message.reply('Yes, I can!')
+    with open("current_name.txt") as current_name:
+        name = current_name.readline().strip("\n")
+        current_name.close()
+
+    with open("mylist.txt") as names:
+        rd = names.readline()
+        while rd != name:
+            rd = names.readline().strip("\n")
+        rd = names.readline().strip("\n")
+        names.close()
+
+    with open("current_name.txt", "w") as current_name:
+        current_name.write(rd)
+        current_name.close()
+
+    print (rd)
+    message.send("{0}, your time to shine!".format(rd))
 
 if __name__ == "__main__":
     main()

@@ -1,3 +1,3 @@
-API_TOKEN = "xoxb-106093684146-hdr64HcI1W9vx3y4DMu8eryH"
+API_TOKEN = "xoxb-106093684146-2KN5uA4XZtlZdCCf2NCx1d8k"
 
 DEFAULT_REPLY = "Sorry but I didn't understand you"
