@@ -1,2 +1,4 @@
+gunicorn==19.6.0
 slackbot==0.4.1
 slacker==0.9.29
+wsgiref==0.1.2
