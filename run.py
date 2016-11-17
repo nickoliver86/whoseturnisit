@@ -4,10 +4,6 @@ from slackbot.bot import listen_to
 import re
 import pdb
 
-def main():
-    bot = Bot()
-    bot.run()
-
 @listen_to('whoseturnisit')
 def help(message):
     with open("current_name.txt") as current_name:
@@ -27,6 +23,10 @@ def help(message):
 
     print (rd)
     message.send("{0}, your time to shine!".format(rd))
+
+def main():
+    bot = Bot()
+    bot.run()
 
 if __name__ == "__main__":
     main()
