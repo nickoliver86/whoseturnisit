@@ -10,7 +10,7 @@ def help(message):
     name_dict = {
 
         "Matthew Billie": "matthew.billie",
-        "Taylor Bird": "tayor",
+        "Taylor Bird": "taylor",
         "Kevin Ellis": "kevin.ellis",
         "Erland Kelley": "erland",
         "Harrison Lavin": "harrison.lavin",
