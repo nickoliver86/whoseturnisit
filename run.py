@@ -25,6 +25,7 @@ def help(message):
     message.send("{0}, your time to shine!".format(rd))
 
 def main():
+    print("Running Main")
     bot = Bot()
     bot.run()
 
