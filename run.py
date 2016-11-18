@@ -40,7 +40,8 @@ def help(message):
 
     print (rd)
     username = name_dict[rd]
-    message.send("@{0}, your time to shine!".format(username))
+    message.send("<@{0}>, your time to shine!".format(username))
+
 
 def main():
     print("Running Main")
