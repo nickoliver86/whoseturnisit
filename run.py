@@ -4,8 +4,25 @@ from slackbot.bot import listen_to
 import re
 import pdb
 
-@listen_to('whoseturnisit')
+@listen_to('whosezturnisit')
 def help(message):
+
+    name_dict = {
+
+        "Matthew Billie": "matthew.billie",
+        "Taylor Bird": "tayor",
+        "Kevin Ellis": "kevin.ellis",
+        "Erland Kelley": "erland",
+        "Harrison Lavin": "harrison.lavin",
+        "Bryce Lively": "brycelively",
+        "Samir Mehta": "samir.mehta",
+        "Daniel Neumann": "daniel.neumann.ctr",
+        "Brian Palladino": "brian.palladino",
+        "Allen Tuggle": "allen.tuggle",
+        "Allison Zentmayer": "allisonzent"
+        
+    }
+
     with open("current_name.txt") as current_name:
         name = current_name.readline().strip("\n")
         current_name.close()
@@ -22,7 +39,8 @@ def help(message):
         current_name.close()
 
     print (rd)
-    message.send("{0}, your time to shine!".format(rd))
+    username = name_dict[rd]
+    message.send("@{0}, your time to shine!".format(username))
 
 def main():
     print("Running Main")

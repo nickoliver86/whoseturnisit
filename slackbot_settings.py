@@ -6,7 +6,6 @@ key = "AutomateAllTheThings"
 encrypted = "ORoMDUBQRFNxVV9iUFFlXF9DMhFzJBU9JhQOADQLChEtHyIgPhY2OxcS"
 
 cipher = XOR.new(key)
-cipher.decrypt(base64.b64decode(encrypted))
 
 API_TOKEN = cipher.decrypt(base64.b64decode(encrypted))
 
