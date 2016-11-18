@@ -38,8 +38,8 @@ def help(message):
         current_name.write(rd)
         current_name.close()
 
-    print (rd)
     username = name_dict[rd]
+    print ("{0}: {1}".format(rd, username))
     message.send("<@{0}>, your time to shine!".format(username))
 
 
