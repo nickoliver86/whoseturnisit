@@ -4,7 +4,7 @@ from slackbot.bot import listen_to
 import re
 import pdb
 
-@listen_to('whosezturnisit')
+@listen_to('whoseturnisit')
 def help(message):
 
     name_dict = {
@@ -20,7 +20,7 @@ def help(message):
         "Brian Palladino": "brian.palladino",
         "Allen Tuggle": "allen.tuggle",
         "Allison Zentmayer": "allisonzent"
-        
+
     }
 
     with open("current_name.txt") as current_name:
